@@ -1,0 +1,388 @@
+/* Override some of the native Gantt */
+.gantt_link_control {
+	display: none !important;
+}
+.gantt_task_progress_drag {
+	display: none !important;
+}
+
+/* Prevent floats from removing any height */
+.section_container {
+	margin-top: 20px;
+}
+
+#gantt_here {
+	margin-top: 10px;
+	overflow: auto;
+}
+
+.gantt_bars_area>.milestone {
+	background-color: #DB9B12;
+	border: 1px solid #9C6109;
+}
+
+i.padright {
+	margin-right: 10px;
+}
+
+.filter_container {
+	float: left;
+	margin-right: 7px;
+	display: none;
+}
+
+#filter,
+#category_filter,
+#custom_field_1_filter,
+#custom_field_2_filter,
+#custom_field_3_filter {
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 15px;
+	border: 1px solid #CCCCCC;
+	display: none;
+	background-color: #EFEFEF;
+	box-shadow: 0px 10px 30px #888888;
+	padding: 10px;
+	z-index: 1000;
+	border-radius: 5px;
+}
+
+#filter:after,
+#category_filter:after,
+#custom_field_1_filter:after,
+#custom_field_2_filter:after,
+#custom_field_3_filter:after{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 0 13px 15px;
+	border-color: #EFEFEF transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+	top: -15px;
+	left: 9px;
+}
+
+#filter:before,
+#category_filter:before,
+#custom_field_1_filter:before,
+#custom_field_2_filter:before,
+#custom_field_3_filter:before{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 0 13px 15px;
+	border-color: #CCCCCC transparent;
+	display: block;
+	width: 0;
+	z-index: 0;
+	top: -16px;
+	left: 9px;
+	}
+
+.menu {
+	list-style: none;
+	padding-left: 0px;
+}
+
+label.selectable {
+	display: block;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+}
+
+input[type='checkbox'] {
+	cursor: pointer;
+}
+
+.fa-pulse {
+	-webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.5
+	-webkit-transform: scale(0.8,0.8);
+}
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.8,0.8); opacity: 0.5;}
+    25% {opacity: 0.75;}
+    50% {-webkit-transform: scale(1.0,1.0); opacity: 1.0;}
+	75% {opacity: 0.75;}
+	100% {-webkit-transform: scale(0.8,0.8); opacity: 0.5;}
+}
+
+#unseenChanges span {
+    position: relative;
+    top: -4px;
+}
+div#unseenChanges {
+    border: 1px gray solid;
+    border-radius: 3px;
+    padding: 8px;
+    background-color: #EDEDED;
+	height:22px;
+	max-width: 600px;
+	min-width: 300px;
+	overflow: auto;
+}
+.showUnseen {
+	opacity: 1;
+	transition: opacity 1s ease-in-out; 
+}
+.hideUnseen {
+	opacity:0;
+	transition: opacity 1s ease-in-out; 
+}
+
+#unseenChanges i {
+    color: #FFBD00;
+    padding-right: 10px;
+}
+
+/*
+  Hide radio button (the round disc)
+  we will use just the label to create pushbutton effect
+*/
+#viewLevel input[type=radio] {
+    display:none; 
+    margin:25px;
+}
+ 
+/*
+  Change the look'n'feel of labels (which are adjacent to radiobuttons).
+  Add some margin, padding to label
+*/
+#viewLevel input[type=radio] + label {
+    display:inline-block;
+    margin-left: 2px;
+	margin-right: 2px;
+	border-radius: 5px;
+	padding: 10px 16px;
+    background-color: #d0d0d0;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+/*
+ Change background color for label next to checked radio button
+ to make it look like highlighted button
+*/
+#viewLevel input[type=radio]:checked + label { 
+   background-image: none;
+    background-color:#ffbd00;
+}
+
+#filterSave select {
+	padding: 7px;
+	border-radius: 5px;
+	width: 300px;
+	display: inline-block;
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+}
+
+#viewLevel a {
+	border-radius: 5px;
+background-color: #454D52;
+padding: 10px;
+color: #FFFFFF;
+text-decoration: none;
+padding-right: 55px;
+	-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+#viewLevel a>i {
+	top: 4px;
+position: relative;
+}
+
+#scaleLevel {
+	margin-top: 10px;
+}
+
+#filterButtons a {
+	border-radius: 5px;
+background-color: #454D52;
+padding: 10px;
+color: #FFFFFF;
+text-decoration: none;
+display: inline-block;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+#filterSave a {
+	border-radius: 5px;
+background-color: #454D52;
+padding: 10px;
+color: #FFFFFF;
+text-decoration: none;
+display: inline-block;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+#filterSave a.disabled {
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+	cursor: not-allowed;
+}
+
+#filterButtons {
+	margin-top: 10px;
+}
+
+/*
+  Hide radio button (the round disc)
+  we will use just the label to create pushbutton effect
+*/
+#scaleLevel input[type=radio] {
+    display:none; 
+    margin:25px;
+}
+
+/*
+  Change the look'n'feel of labels (which are adjacent to radiobuttons).
+  Add some margin, padding to label
+*/
+#scaleLevel input[type=radio] + label {
+    display:inline-block;
+    margin-left: 2px;
+	margin-right: 2px;
+	border-radius: 5px;
+	padding: 10px 16px;
+    background-color: #d0d0d0;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+/*
+ Change background color for label next to checked radio button
+ to make it look like highlighted button
+*/
+#scaleLevel input[type=radio]:checked + label { 
+   background-image: none;
+    background-color:#ffbd00;
+}
+
+#scaleLevel select {
+	padding: 8px;
+	border-radius: 5px;
+
+}
+
+#scaleLevel a {
+	border-radius: 5px;
+background-color: #454D52;
+padding: 10px;
+color: #FFFFFF;
+text-decoration: none;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+#scaleLevel a>i {
+	top: 4px;
+position: relative;
+}
+
+#filterSave input[type=select] {
+	padding: 8px;
+border-radius: 5px;
+width: 245px;
+border: 1px solid grey;
+margin-left: 2px;
+}
+
+#filterSave input[type=checkbox] {
+    display:none; 
+    margin:25px;
+}
+
+.ganttViewBox {
+	min-width: 450px;
+	margin-bottom: 10px;
+	float: left;
+	height: 75px;
+}
+
+.ganttFilterBox {
+	min-width: 500px;
+	float: left;
+	margin-bottom: 10px;
+	display: inline-block;
+	height: 75px;
+}
+	
+/*
+  Change the look'n'feel of labels (which are adjacent to checkboxes).
+  Add some margin, padding to label
+*/
+#filterSave input[type=checkbox] + label {
+    display:inline-block;
+    margin-left: 2px;
+	margin-right: 2px;
+	border-radius: 5px;
+	padding: 10px 16px;
+    background-color: #d0d0d0;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+#filterSave input[type=checkbox] + label:before { 
+	font-family: FontAwesome;
+	content: "\f09c";
+	font-size: 14px;
+}
+
+/*
+ Change background color for label next to checkbox
+ to make it look like highlighted button
+*/
+#filterSave input[type=checkbox]:checked + label { 
+   background-image: none;
+    background-color:#ffbd00;
+		padding-right: 20px;
+}
+
+#filterSave input[type=checkbox]:checked + label:before { 
+	font-family: FontAwesome;
+	content: "\f023";
+	font-size: 14px;
+}
