@@ -1,7 +1,7 @@
 activecollab-gantt
 ==================
 
-A better Gantt Chart for activeCollab
+A better Gantt Chart for activeCollab 4.
 
 ## How to Setup ##
 Basically, all you need to do to set this up is create a folder in your activeCollab installation called `gantt` in the following directory (for example):
